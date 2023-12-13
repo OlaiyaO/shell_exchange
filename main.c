@@ -35,7 +35,7 @@ int handle_user_input(int st, int counter, char **argv)
 				st = handle_builtin_cmd(command, st);
 			else if (_strcmp(command[0], "exit") == 0)
 			{
-				handle_exit(command, buffer, argv, counter);
+				exit_shell(command, buffer, argv, counter);
 				free_pointers(command, buffer);
 				buffer = NULL;
 				break;

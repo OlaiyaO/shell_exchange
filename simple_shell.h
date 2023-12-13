@@ -42,6 +42,8 @@ typedef struct builtin
 	int (*fun)(char **line, int er);
 } builtin_t;
 
+int _help(char **cmd, __attribute__((unused)) int last_status);
+
 builtin_t *get_builtin_commands(void);
 
 builtin_t *get_command_functions(void);
@@ -68,6 +70,13 @@ void print_illegal_number_error(
 	char **arguments,
 	int counter,
 	char **command
+);
+
+void exit_shell(
+        char **cmd_array,
+        char *user_input,
+        char **program_argv,
+        int execution_count
 );
 
 void handle_hashtag(char *buff);

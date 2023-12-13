@@ -1,5 +1,4 @@
 #include "simple_shell.h"
-#include "string_utils.h"
 
 /**
  * _help - Display help for a command.
